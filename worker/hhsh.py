@@ -1,6 +1,7 @@
 from zzcore import StdAns, mysakuya
 import requests
 
+
 class Ans(StdAns):
     def GETMSG(self):
         if len(self.parms) < 2:
@@ -11,8 +12,11 @@ class Ans(StdAns):
 
         msg = f"[CQ:reply,id={self.raw_msg['message_id']}]"
         r = nbnhhsh(self.parms[1])
-        msg += f'''{(str(r['trans'])[1:-1]).replace("'","").replace(","," ")}'''
-        
+        try:
+            msg += f'''{(str(r['trans'])[1:-1]).replace("'", "").replace(",", " ")}'''
+        except:
+            msg += "没查到（"
+
         return msg
 
 

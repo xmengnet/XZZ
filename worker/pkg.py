@@ -15,6 +15,7 @@ class Ans(StdAns):
                   'Community, Community-Testing仓库以及AUR的软件 '
             return msg
         else:
+            self.parms[1]=self.parms[1].lower()
             repo = str()
             try:
                 if len(self.parms) > 1:

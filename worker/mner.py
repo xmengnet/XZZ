@@ -19,7 +19,11 @@ class Ans(StdAns):
                 if count < 5:
                     # soft = list()
                     for i in range(count):
+<<<<<<< HEAD
+                        soft+= req['results'][i]['Name']+'\n'
+=======
                         soft= req['results'][i]['Name']
+>>>>>>> 474bbe65ba3f5429e9f23173e163d70f62832566
                 else:
                     for i in range(5):
                         soft+=req['results'][i]['Name']+'\n'
